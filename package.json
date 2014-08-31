@@ -1,0 +1,16 @@
+{
+  "name": "customscroll",
+  "version": "0.0.1",
+  "description": "",
+  "main": "customscroll.js",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/zafar-saleem/customscroll.git"
+  },
+  "author": "Zafar Saleem",
+  "license": "MIT",
+  "devDependencies": {
+    "grunt": "~0.4.4",
+    "grunt-contrib-jshint": "~0.10.0"
+  }
+}
