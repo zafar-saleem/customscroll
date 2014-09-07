@@ -1,17 +1,22 @@
 (function () {
+    // variables and references to DOM elements
     var $view = document.querySelector('#view'),
         $indicator = document.querySelector('#indicator'),
         offset = 0, min = 0, isMouseWheel = true, count = 1, direction,
         max = parseInt(getComputedStyle($view).height, 10) - innerHeight,
         relative = (innerHeight - 30) / max;
 
+    // mouse scroll event, call onMouseScroll function
     $view.addEventListener('mousewheel', onMouseScroll);
 
+    /*
+     * sets detail and call scroll function
+     */
     function onMouseScroll (e) { 
       var detail = e.detail, 
           wheelDelta = e.wheelDelta;
       
-      direction = e.deltaY;
+      // direction = e.deltaY;
       isMouseWheel = true;
       
       if (detail) {
@@ -32,6 +37,9 @@
       return false;
     }
 
+    /*
+     * Main function that scrolls the view and indicator
+     */
     function scroll (mouseYPos, delta) { 
       resetOffset(mouseYPos);
 
@@ -49,7 +57,9 @@
       }
     }
 
-
+    /*
+     * Resets offset
+     */
     function resetOffset (mouseYPos) {
       if (mouseYPos > max) {
         offset = max;
