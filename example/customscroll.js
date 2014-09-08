@@ -1,10 +1,11 @@
 (function () {
     // variables and references to DOM elements
-    var $view = document.querySelector('#view'),
-        $indicator = document.querySelector('#indicator'),
+    var $view      = document.querySelector('.view'),
+        $indicator = document.querySelector('.indicator'),
+        $content   = document.querySelector('.content'),
         offset = 0, min = 0, isMouseWheel = true, count = 1, direction,
-        max = parseInt(getComputedStyle($view).height, 10) - innerHeight,
-        relative = (innerHeight - 30) / max;
+        max        = $view.clientHeight - $content.offsetHeight,
+        relative   = ($content.offsetHeight - 30) / max;
 
     // mouse scroll event, call onMouseScroll function
     $view.addEventListener('mousewheel', onMouseScroll);

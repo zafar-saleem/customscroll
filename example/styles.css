@@ -4,25 +4,27 @@ aside {
     color: #fff;
 }
 
-#content {
-  position: absolute;
-  width: 100%;
-  height: 100%;
+.content {
+  position: relative;
+  width: 48%;
+  height: 300px;
+  margin-right: 1%;
   top: 0;
   left: 0;
   overflow: hidden;
+  float: left;
 }
 
-#view {
-  position: relative;
+.view {
+  position: absolute;
 }
 
-#view p {
+.view p {
     margin-left: 1em;
     margin-right: 1em;
 }
 
-#indicator {
+.indicator {
   position: absolute;
   top: 0;
   right: 0;
