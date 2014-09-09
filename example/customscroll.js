@@ -1,8 +1,8 @@
 (function () {
     // variables and references to DOM elements
-    var $view      = document.querySelector('.view'),
-        $indicator = document.querySelector('.indicator'),
-        $content   = document.querySelector('.content'),
+    var $view      = document.querySelector('.cs-view'),
+        $indicator = document.querySelector('.cs-indicator'),
+        $content   = document.querySelector('.cs-content'),
         offset = 0, min = 0, isMouseWheel = true, count = 1, direction,
         max        = $view.clientHeight - $content.offsetHeight,
         relative   = ($content.offsetHeight - 30) / max;
@@ -14,7 +14,7 @@
      * sets detail and call scroll function
      */
     function onMouseScroll (e) { 
-      var detail = e.detail, 
+      var detail = e.detail,
           wheelDelta = e.wheelDelta;
       
       // direction = e.deltaY;
